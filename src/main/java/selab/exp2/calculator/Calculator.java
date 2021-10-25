@@ -1,16 +1,18 @@
 package selab.exp2.calculator;
 
 public class Calculator {
-    private double currentValue;
+    private int input;
 
-    public double getCurrentValue() {
-        return currentValue;
-    }
+    private double result;
 
-    public void setCurrentValue(double currentValue) {
-        this.currentValue = currentValue;
+    public void setInput(int input) {
+        this.input = input;
     }
 
     public void clickButton(String name) {
+    }
+
+    public double getResult() {
+        return result;
     }
 }

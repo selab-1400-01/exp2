@@ -14,9 +14,9 @@ public class Stepdefs {
         this.calculator = new Calculator();
     }
 
-    @Given("Input value of {double}")
-    public void inputValueOf(double value) {
-        this.calculator.setCurrentValue(value);
+    @Given("Input value of {int}")
+    public void inputValueOf(int value) {
+        this.calculator.setInput(value);
     }
 
     @When("I press button {string}")
@@ -26,6 +26,6 @@ public class Stepdefs {
 
     @Then("I expect the result {double}")
     public void iExpectTheResult(double result) {
-        Assert.assertEquals(result, this.calculator.getCurrentValue(), 1e-18);
+        Assert.assertEquals(result, this.calculator.getResult(), 1e-18);
     }
 }
