@@ -10,6 +10,14 @@ public class Calculator {
     }
 
     public void clickButton(String name) {
+        switch (name) {
+            case "sqr":
+                this.result = Math.sqrt(this.input);
+                break;
+            default:
+                throw new UnsupportedOperationException(
+                    "Operator is not supported: " + name);
+        }
     }
 
     public double getResult() {
