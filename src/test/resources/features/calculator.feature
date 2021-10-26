@@ -1,6 +1,6 @@
 Feature: Calculator
+#    basic tests, test special cases
   Scenario: Getting square root
-    # basic tests, test special cases
     Given Input value of 9
     When I press button "sqr"
     Then I expect the result 3
@@ -58,8 +58,8 @@ Feature: Calculator
     | 8803 | 93.82430388763883 |
     | 842 | 29.017236257093817 |
     
-  Scenario: Getting reverse of the input 
-    # basic tests, test special cases 
+#    basic tests, test special cases
+  Scenario: Getting reverse of the input
     Given Input value of 1
     When I press button "rvs" 
     Then I expect the result 1
@@ -80,9 +80,13 @@ Feature: Calculator
     When I press button "rvs"
     Then I expect the result -0.1 
     
-#    Given Input value of 0
-#    When I press button "rvs"
-#    Then I expect the result {double}
+    Given Input value of 0
+    When I press button "rvs"
+    Then I expect the result to be Infinity
+
+    Given Input value of -0
+    When I press button "rvs"
+    Then I expect the result to be Infinity
     
 
 

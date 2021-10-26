@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.java.eo.Do;
+import io.cucumber.java.sl.In;
 import org.junit.Assert;
 
 import javax.print.Doc;
@@ -33,7 +34,14 @@ public class Stepdefs {
     }
 
     @Then("I expect the result to be NaN")
-    public void iExpectTheException() {
+    public void iExpectToBeNaN() {
         Assert.assertTrue(Double.isNaN(this.calculator.getResult()));
     }
+
+    @Then("I expect the result to be Infinity")
+    public void iExpectToThrow() {
+        Assert.assertTrue(Double.isInfinite(this.calculator.getResult()));
+    }
+
+
 }
