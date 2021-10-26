@@ -4,7 +4,10 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.eo.Do;
 import org.junit.Assert;
+
+import javax.print.Doc;
 
 public class Stepdefs {
     private Calculator calculator;
@@ -27,5 +30,10 @@ public class Stepdefs {
     @Then("I expect the result {double}")
     public void iExpectTheResult(double result) {
         Assert.assertEquals(result, this.calculator.getResult(), 1e-18);
+    }
+
+    @Then("I expect the result to be NaN")
+    public void iExpectTheException() {
+        Assert.assertTrue(Double.isNaN(this.calculator.getResult()));
     }
 }
