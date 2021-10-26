@@ -14,6 +14,9 @@ public class Calculator {
             case "sqr":
                 this.result = Math.sqrt(this.input);
                 break;
+            case "rvs":
+                this.result = (1.0 / this.input);
+                break;
             default:
                 throw new UnsupportedOperationException(
                     "Operator is not supported: " + name);
