@@ -19,11 +19,15 @@ public class Calculator {
                 break;
             default:
                 throw new UnsupportedOperationException(
-                    "Operator is not supported: " + name);
+                        "Operator is not supported: " + name);
         }
     }
 
     public double getResult() {
         return result;
+    }
+
+    public int add(int a, int b) {
+        return a + b;
     }
 }
