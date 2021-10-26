@@ -57,6 +57,32 @@ Feature: Calculator
     | 8295 | 91.0768905925098 |
     | 8803 | 93.82430388763883 |
     | 842 | 29.017236257093817 |
-
+    
+  Scenario: Getting reverse of the input 
+    # basic tests, test special cases 
+    Given Input value of 1
+    When I press button "rvs" 
+    Then I expect the result 1
+    
+    Given Input value of 2
+    When I press button "rvs"
+    Then I expect the result 0.5
+    
+    Given Input value of -1
+    When I press button "rvs"
+    Then I expect the result -1 
+    
+    Given Input value of -2 
+    When I press button "rvs"
+    Then I expect the result -0.5
+    
+    Given Input value of -10 
+    When I press button "rvs"
+    Then I expect the result -0.1 
+    
+#    Given Input value of 0
+#    When I press button "rvs"
+#    Then I expect the result {double}
+    
 
 
