@@ -55,9 +55,7 @@ public class Stepdefs {
     }
 
     @Then("I expect the result to be Infinity")
-    public void iExpectToThrow() {
+    public void iExpectToBeInfinity() {
         Assert.assertTrue(Double.isInfinite(this.calculator.getResult()));
     }
-
-
 }
